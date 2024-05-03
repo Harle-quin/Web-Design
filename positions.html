@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <meta charset="utf-8">
+    <title>my index page</title>
+    <style>
+        div {
+            background: paleturquoise;
+            width: 400px;
+            height: 200px;
+            border: 10px solid lightseagreen;
+            border-bottom: 40px solid lightseagreen;
+            border-right: 20px solid lightseagreen;
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            left: 200px;
+            background: #c0dded;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #7EA5ED;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #DE7EC7;
+        }
+
+        .sticky {
+            position: sticky;
+            top:0;
+            background: #A771C5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky">
+    <p>sticky</p>
+    </div>
+
+    <div class="static">
+    <p>static box</p>
+    </div>
+
+    <div class="relative">
+    <p>relative</p>
+    </div>
+
+    <div class="fixed">
+    <p>fixed</p>
+    </div>
+        
+    <div class="absolute">
+    <p>absolute</p>
+    </div>
+
+
+
+</body>
+
+</html>
