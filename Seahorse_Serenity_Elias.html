@@ -8,15 +8,44 @@
   <link rel="icon" type="image/png" href="sea-favicon-16x16.png" sizes="16x16" />
   <meta charset="utf-8">
   <title>Seahorse Serenity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
   <style>
+.container {  display: grid;
+  grid-template-columns: 300px 2fr 1fr;
+  grid-template-rows: 200px 1fr 100px;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "nav Main ."
+    "Footer Footer Footer";
+}
+
+.nav { grid-area: Left; }
+
+.Main { grid-area: Main; }
+
+.Header { grid-area: Header; }
+
+.Footer { grid-area: Footer; }
+
+
 body {
-      background: rgb(35, 38, 43)37), 0, 0);
+      background: rgb(35, 38, 43);
       font-family: 'Chakra Petch';
       font-optical: auto;
       font-weight: 300;
       font-style: normal;
-      color: #000;
+      color: #b97962;
       font-size: 18px;
+    }
+
+    p {
+      color:rgb(155, 198, 226);
     }
 
     a {
@@ -39,10 +68,38 @@ body {
       border-radius: 0;
       box-shadow: 0 10px 20px skyblue;
     }
+
+    b {
+      display: block;
+      text-decoration: none;
+      color: rgb(12, 12, 41);
+      background: rgb(158, 197, 222);
+      border: 2px solid rgb(150, 97, 32);
+      width: 200px;
+      text-align: center;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 0 transparent;
+      transition: .5s border-radius;
+    }
+
+    b:hover {
+      background: skyblue;
+      color: rgb(114, 48, 24);
+      border-radius: 0;
+      box-shadow: 0 10px 20px skyblue;
+    }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <div class="nav"></div>
+    <div class="Main"></div>
+    <div class="Header"></div>
+    <div class="Footer"></div>
+  </div>
+
   <header>
     <h1>Seahorse Serenity</h1>
     <img src="images/horseysea.png" alt="seahorses are fun" />
@@ -102,12 +159,12 @@ body {
   <footer>
     <ul>
       <li>Seahorse Friends:</li>
-      <li><a href="http://www.theseahorsetrust.org/seahorse-facts.aspx" target="_blank">The Seahorse Trust</a> |</li>
-      <li><a href="http://www.nationalgeographic.com/animals/fish/group/seahorses/" target="_blank">National
-          Geographic</a> |</li>
-      <li><a href="http://seahorse.com/" target="_blank">Seahorse.com</a> |</li>
-      <li><a href="http://www.allthesea.com/Seahorses.html" target="_blank">All
-          The Sea</a></li>
+      <li><b href="http://www.theseahorsetrust.org/seahorse-facts.aspx" target="_blank">The Seahorse Trust</b> |</li>
+      <li><b href="http://www.nationalgeographic.com/animals/fish/group/seahorses/" target="_blank">National
+          Geographic</b> |</li>
+      <li><b href="http://seahorse.com/" target="_blank">Seahorse.com</b> |</li>
+      <li><b href="http://www.allthesea.com/Seahorses.html" target="_blank">All
+          The Sea</b></li>
     </ul>
     <p>&copy; Seahorse Serenity 2024</p>
   </footer>
